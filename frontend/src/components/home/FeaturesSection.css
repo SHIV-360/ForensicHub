@@ -1,0 +1,46 @@
+/* frontend/src/components/casestudies/CaseStudyCard.css */
+
+.case-study-card .card-img-container {
+    position: relative;
+    height: 200px; /* Fixed height for consistency */
+    overflow: hidden;
+}
+
+.case-study-card .card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures proper image scaling without distortion */
+    object-position: center;
+}
+
+.case-study-card .card-img-overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+}
+
+.case-study-card .card-img-overlay-top .badge {
+    font-size: 0.75rem;
+}
+
+/* Ensure consistent card height */
+.case-study-card {
+    height: 100%;
+}
+
+/* Style the "View Case Study" button to match brand green */
+.case-study-card .btn-success {
+    background-color: var(--brand-green);
+    border-color: var(--brand-green);
+}
+
+.case-study-card .btn-success:hover {
+    background-color: #006666;
+    border-color: #006666;
+}

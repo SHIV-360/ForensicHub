@@ -1,0 +1,39 @@
+/* Nav links */
+.nav-link {
+  position: relative;
+  z-index: 2; /* keep text above the pill */
+  transition: color 0.3s ease;
+}
+
+/* Active link text */
+.nav-link.active {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* Sliding pill indicator */
+.nav-indicator {
+  position: absolute;
+  background: var(--brand-green);
+  border-radius: 50rem;
+  transition: all 0.3s ease;
+  will-change: left, top, width, height;
+  z-index: 1;
+}
+
+/* ==============================================
+   MOBILE STYLES (collapsed menu)
+   ============================================== */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: right;
+    align-self: flex-end;
+    width: fit-content;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}

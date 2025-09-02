@@ -1,0 +1,25 @@
+.law-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.law-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.law-card .card-img-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.law-card .card-img-container img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.law-card .card-img-overlay-top {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}

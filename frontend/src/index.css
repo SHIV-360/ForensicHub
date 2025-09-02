@@ -1,0 +1,96 @@
+:root {
+  --brand-primary: #008080;
+  --brand-orange: #fd7e14;
+  --brand-light-gray: #f0f2f5;
+  --brand-green: #008080;
+}
+
+/* This rule will now correctly apply to all buttons */
+.btn, .btn-lg {
+  border-radius: 50rem !important; 
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-top: 0.25rem !important;   
+  padding-bottom: 0.25rem !important; 
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Ysabeau', sans-serif;
+  font-weight: 500; 
+  font-size: 19px; 
+  line-height: 1.5; 
+  letter-spacing: 0.01em; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--brand-light-gray);
+}
+
+/* Brand Green Styles for Laws and Case Studies Pages */
+
+/* Main headings styling */
+.display-5 {
+    color: var(--brand-green) !important;
+}
+
+/* Nav pills (filter tabs) styling */
+.nav-pills .nav-link {
+    color: var(--brand-green);
+    border: 1px solid var(--brand-green);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50rem !important;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: var(--brand-green);
+    color: white;
+    border-color: var(--brand-green);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--brand-green) !important;
+    border-color: var(--brand-green) !important;
+    color: white !important;
+}
+
+/* Nav pills container spacing */
+.nav-pills {
+    gap: 0.5rem;
+}
+
+.laws-page .card .btn,
+.laws-page .btn-outline-primary,
+.laws-page .btn-outline-success,
+.laws-page .btn-primary {
+    background-color: var(--brand-green) !important;
+    border-color: var(--brand-green) !important;
+    color: white !important;
+}
+
+.laws-page .card .btn:hover,
+.laws-page .btn-outline-primary:hover,
+.laws-page .btn-outline-success:hover,
+.laws-page .btn-primary:hover {
+    background-color: #006666 !important;
+    border-color: #006666 !important;
+    color: white !important;
+}
+
+/* Alternative: If your laws page doesn't have a laws-page class, 
+   you can target all cards on any page with law-related content */
+.card .btn-outline-primary,
+.card .btn-outline-success {
+    background-color: var(--brand-green) !important;
+    border-color: var(--brand-green) !important;
+    color: white !important;
+}
+
+.card .btn-outline-primary:hover,
+.card .btn-outline-success:hover {
+    background-color: #006666 !important;
+    border-color: #006666 !important;
+    color: white !important;
+}

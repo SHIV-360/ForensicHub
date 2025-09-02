@@ -1,0 +1,29 @@
+.resources-page .resource-link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #dee2e6;
+    border-radius: 50rem; /* Pill shape */
+    text-decoration: none;
+    color: #212529;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.resources-page .resource-link-item:hover {
+    background-color: var(--brand-green);
+    border-color: var(--brand-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.resources-page .category-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resources-page .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 128, 128, 0.1) !important;
+}

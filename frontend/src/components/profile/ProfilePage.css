@@ -1,0 +1,89 @@
+/* --- Pill Button Styling --- */
+.profile-page .btn-pill-outline {
+    background-color: transparent;
+    border: 1px solid var(--brand-green);
+    color: var(--brand-green);
+    border-radius: 50rem;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.profile-page .btn-pill-outline:hover {
+    background-color: var(--brand-green);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Progress Bar Styling --- */
+.profile-page .progress-bar-brand .progress-bar {
+    background-color: var(--brand-green);
+}
+
+.profile-page .progress {
+    height: 0.75rem;
+}
+
+/* --- General Card & List Styling --- */
+.profile-page .list-group-item {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* --- Achievement Badge Styling --- */
+.profile-page .achievement-badge {
+    padding: 1rem 0.5rem;
+    border-radius: 50rem;
+    border: 1px solid #dee2e6;
+    font-weight: 500;
+}
+
+.profile-page .achievement-first-case-solved {
+    background-color: #fff0e1;
+    color: #995400;
+}
+.profile-page .achievement-network-expert {
+    background-color: #e0f2fe;
+    color: #0c599c;
+}
+.profile-page .achievement-mobile-master {
+    background-color: #e6f2f2;
+    color: #004d4d;
+}
+.profile-page .achievement-streak-champion {
+    background-color: #fefce8;
+    color: #7a6a01;
+}
+
+/* --- For Tablets and Smaller (screens smaller than 992px) --- */
+@media (max-width: 991.98px) {
+    .profile-page .col-lg-8,
+    .profile-page .col-lg-4 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+/* --- For Mobile Phones (screens smaller than 768px) --- */
+@media (max-width: 767.98px) {
+    .profile-page .row.align-items-center {
+        text-align: center;
+    }
+
+    .profile-page .row.align-items-center .col,
+    .profile-page .row.align-items-center .col-auto {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .profile-page .btn-pill-outline {
+        width: 100%;
+    }
+
+    .profile-page .text-center.mb-4.g-3 .col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

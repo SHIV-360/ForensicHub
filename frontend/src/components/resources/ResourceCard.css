@@ -1,0 +1,36 @@
+.resource-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.resource-card .card-img-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.resource-card .card-img-container img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.resource-card .card-img-overlay-top {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.resource-card .download-btn {
+    background-color: var(--brand-green);
+    border-color: var(--brand-green);
+    color: white;
+}
+
+.resource-card .download-btn:hover {
+    background-color: #006666;
+    border-color: #006666;
+}

@@ -1,0 +1,60 @@
+.challenge-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 128, 128, 0.15) !important;
+}
+
+.challenge-card .card-img-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.challenge-card .card-img-container img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.challenge-card .card-img-overlay-top {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.challenge-card .badge-brand-green {
+    background-color: var(--brand-green) !important;
+}
+
+/* --- Button Styling Fix --- */
+
+/* Solid Green Button (Start Challenge) */
+.challenge-card .btn.btn-primary {
+    background-color: var(--brand-green) !important;
+    border-color: var(--brand-green) !important;
+    color: white !important;
+}
+
+.challenge-card .btn.btn-primary:hover {
+    background-color: #006666 !important; /* Darker green */
+    border-color: #006666 !important;
+}
+
+/* Outlined Green Button (Continue) */
+.challenge-card .btn.btn-outline-primary {
+    background-color: transparent !important;
+    border-color: var(--brand-green) !important;
+    color: var(--brand-green) !important;
+}
+
+.challenge-card .btn.btn-outline-primary:hover {
+    background-color: var(--brand-green) !important;
+    border-color: var(--brand-green) !important;
+    color: white !important;
+}

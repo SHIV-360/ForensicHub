@@ -1,0 +1,33 @@
+.playground-page .sidebar .list-group-item {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* --- Brand Color Styling --- */
+
+.playground-page .badge-level {
+    background-color: var(--brand-green) !important;
+    color: white;
+}
+
+.playground-page .alert-brand {
+    background-color: #e6f2f2;
+    color: #004d4d;
+    border-color: #b3d9d9;
+}
+
+.progress-bar-brand .progress-bar {
+    background-color: var(--brand-green);
+}
+
+.playground-page .badge-brand-green {
+    background-color: var(--brand-green) !important;
+}
+
+
+@media (max-width: 991.98px) {
+    .playground-page .sidebar {
+        margin-top: 2rem;
+    }
+}
