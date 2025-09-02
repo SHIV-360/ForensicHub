@@ -1,7 +1,3 @@
-Of course. Here is a comprehensive README.md file for your ForensicHub repository, created by analyzing all the provided project files.
-
------
-
 # ForensicHub
 
 Welcome to ForensicHub, a web application designed for digital forensics professionals, students, and enthusiasts. This platform offers a rich, interactive environment to master digital forensics through hands-on challenges, comprehensive resources, real-world case studies, and up-to-date legal information.
@@ -114,12 +110,14 @@ ForensicHub/
 
 Here are some screenshots of the application:
 
-  * **Homepage**
+ ## Homepage
+![Homepage Screenshot](image2.png)
 
-  * **Profile Page**
+## Profile Page
+![Profile Page Screenshot](image.png)
+
 
 ## Contact
-
 SHIV-360 - [https://github.com/SHIV-360](https://www.google.com/search?q=https://github.com/SHIV-360)
 
 Project Link: [https://github.com/SHIV-360/ForensicHub](https://github.com/SHIV-360/ForensicHub)
