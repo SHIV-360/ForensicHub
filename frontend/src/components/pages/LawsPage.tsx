@@ -5,7 +5,7 @@ import { getLawsData } from '../../data/mockData'; // Import the new async funct
 import LawCard from '../laws/LawCard';
 import '../laws/LawsPage.css';
 
-// Define the type for a single law object for type safety
+
 interface Law {
     title: string;
     description: string;

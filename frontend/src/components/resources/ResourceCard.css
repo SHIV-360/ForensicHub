@@ -24,7 +24,7 @@
     left: 1rem;
 }
 
-/* --- NEW STYLE FOR THE DARK BADGE --- */
+
 .resource-card .badge-dark-custom {
     background-color: black !important;
     color: white !important; 

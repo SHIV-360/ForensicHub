@@ -8,7 +8,7 @@ import {
 } from '../../data/mockData'; // Import the new async functions
 import '../contact/ContactPage.css';
 
-// --- Define types for our data ---
+
 interface ContactInfo {
     icon: string;
     value: string;
@@ -119,7 +119,7 @@ const ContactPage = () => {
                     </Col>
                 </Row>
 
-                {/* --- Meet Our Team Section (Full Width) --- */}
+                {/* --- Meet Our Team Section --- */}
                 <Row className="mt-5">
                     <Col>
                         <h2 className="text-center fw-bold mb-4">Meet Our Team</h2>

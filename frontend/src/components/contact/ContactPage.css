@@ -23,12 +23,12 @@
     color: var(--brand-green);
 }
 
-/* --- Icon Color --- */
+/*Icon Color */
 .contact-page .icon-brand-green {
     color: var(--brand-green);
 }
 
-/* --- Team Card Styles --- */
+/* Team Card Styles */
 .contact-page .team-card {
     background-color: #f8f9fa;
     border: 1px solid #e9ecef;
@@ -43,7 +43,7 @@
     line-height: 1.2;
 }
 
-/* --- Social Media & Button Styles --- */
+/* Social Media & Button Styles */
 .contact-page .social-icon {
     color: #6c757d;
     transition: color 0.2s ease;

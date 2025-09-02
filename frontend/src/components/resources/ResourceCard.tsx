@@ -18,7 +18,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ title, description, image, 
             <div className="card-img-container">
                 <Card.Img variant="top" src={image} />
                 <div className="card-img-overlay-top">
-                    {/* MODIFIED: Changed class name to badge-dark-custom */}
+                    
                     <Badge className="badge-dark-custom">{category}</Badge>
                 </div>
             </div>

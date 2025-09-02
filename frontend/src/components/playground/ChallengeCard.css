@@ -34,7 +34,7 @@
 
 /* --- Button Styling Fix --- */
 
-/* Solid Green Button (Start Challenge) */
+/* Solid Green Button */
 .challenge-card .btn.btn-primary {
     background-color: var(--brand-green) !important;
     border-color: var(--brand-green) !important;
@@ -42,11 +42,11 @@
 }
 
 .challenge-card .btn.btn-primary:hover {
-    background-color: #006666 !important; /* Darker green */
+    background-color: #006666 !important; 
     border-color: #006666 !important;
 }
 
-/* Outlined Green Button (Continue) */
+/* Outlined Green Button  */
 .challenge-card .btn.btn-outline-primary {
     background-color: transparent !important;
     border-color: var(--brand-green) !important;

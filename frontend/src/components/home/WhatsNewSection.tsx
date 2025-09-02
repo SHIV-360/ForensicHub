@@ -41,12 +41,12 @@ const WhatsNewSection = () => {
                     </Card>
                 </Col>
 
-                {/* Quick Start Column - UPDATED */}
+                
                 <Col md={4}>
                     <Card className="h-100 border-0 shadow-sm">
                         <Card.Body className="p-4 d-flex flex-column">
                             <Card.Title className="fw-bold mb-4">Quick Start</Card.Title>
-                            {/* Changed Buttons to styled Links */}
+                            
                             <a href="#" className="quick-start-item primary">
                                 <Mortarboard className="me-2" /> Take a Challenge
                             </a>

@@ -1,4 +1,4 @@
-/* --- Hero Section --- */
+/* Hero Section*/
 .hero-section {
     max-width: 1400px;
     margin: 0 auto;
@@ -25,7 +25,7 @@
     color: #fff;
 }
 
-/* --- Features Section --- */
+/*Features Section */
 .feature-card {
     border: 1px solid #e9ecef;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -36,7 +36,7 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07) !important;
 }
 
-/* --- What's New Section --- */
+/* What's New Section */
 .whats-new-item {
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@
     cursor: pointer;
 }
 
-/* --- Quick Start Section --- */
+/* Quick Start Section */
 .quick-start-item {
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@
     text-align: center;
     padding: 0.25rem 0.5rem;
     border: 1px solid #dee2e6;
-    border-radius: 50rem; /* Pill shape */
+    border-radius: 50rem;
     text-decoration: none;
     font-weight: 500;
     margin-bottom: 1rem;
@@ -102,11 +102,11 @@ RESPONSIVE STYLES
 ==============================================
 */
 
-/* --- For Mobile Phones (screens smaller than 768px) --- */
+/*For Mobile */
 @media (max-width: 767.98px) {
     .hero-section {
         padding: 4rem 1rem;
-        text-align: center; /* Ensures hero text is centered */
+        text-align: center; 
     }
 
     .hero-section h1 {

@@ -74,7 +74,7 @@ const ProfilePage = () => {
                     </Col>
                 </Row>
 
-                {/* --- Profile Stats --- */}
+                {/*Profile Stats */}
                 <Row className="text-center mb-4 g-3">
                     <Col><Card className="p-3 shadow-sm border-0"><strong>Level {profile.stats.level}</strong><div className="text-muted small">Current Level</div></Card></Col>
                     <Col><Card className="p-3 shadow-sm border-0"><strong>{profile.stats.xp}</strong><div className="text-muted small">Total XP</div></Card></Col>

@@ -2,14 +2,14 @@
 
 .case-study-card .card-img-container {
     position: relative;
-    height: 200px; /* Fixed height for consistency */
+    height: 200px; 
     overflow: hidden;
 }
 
 .case-study-card .card-img-top {
     height: 100%;
     width: 100%;
-    object-fit: cover; /* Ensures proper image scaling without distortion */
+    object-fit: cover; 
     object-position: center;
 }
 
@@ -34,7 +34,7 @@
     height: 100%;
 }
 
-/* Style the "View Case Study" button to match brand green */
+
 .case-study-card .btn-success {
     background-color: var(--brand-green);
     border-color: var(--brand-green);

@@ -8,7 +8,7 @@ const CommunitySection = () => {
                 <Row className="align-items-center">
                     <Col lg={6} className="mb-4 mb-lg-0">
                         <Image
-                            // UPDATED: Use a direct path to the public folder
+                            
                             src="/assets/images/hero-bg.png"
                             rounded
                             fluid 

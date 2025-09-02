@@ -1,5 +1,5 @@
 .hero-section {
-    /* Make sure you have an image at this path */
+    
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/images/hero-bg.png');
     background-size: cover;
     background-position: center;

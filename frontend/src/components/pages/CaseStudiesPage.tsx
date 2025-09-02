@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import { Book, People, ChatLeftText } from 'react-bootstrap-icons';
-import { getCaseStudiesData } from '../../data/mockData'; // Import the new async function
+import { getCaseStudiesData } from '../../data/mockData'; 
 import CaseStudyCard from '../casestudies/CaseStudyCard';
 
 const CaseStudiesPage = () => {
-    const [caseStudies, setCaseStudies] = useState<any[]>([]); // State to hold fetched data
+    const [caseStudies, setCaseStudies] = useState<any[]>([]); 
     const [activeKey, setActiveKey] = useState('all');
 
     // Fetch data when the component mounts
@@ -37,7 +37,7 @@ const CaseStudiesPage = () => {
                     Learn from real-world digital forensics investigations.
                 </p>
 
-                {/* Filter Pills */}
+                
                 <Nav
                     variant="pills"
                     activeKey={activeKey}

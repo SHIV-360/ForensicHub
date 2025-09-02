@@ -39,7 +39,6 @@
     font-size: 0.75rem;
 }
 
-/* Style the "View Case Study" button to match brand green */
 .case-study-card .btn-success {
     background-color: var(--brand-green);
     border-color: var(--brand-green);
