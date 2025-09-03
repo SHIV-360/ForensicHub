@@ -1,22 +1,47 @@
-// The base URL of your running Go API
+// frontend/src/data/mockData.ts
+
 const API_BASE_URL = 'http://localhost:8080/api';
 
-// A generic fetch function to reduce redundancy
+// FIX: Added string types to parameters
+export async function loginUser(username: string, password: string) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify({ username, password }),
+    });
+    return response.ok;
+  } catch (error) {
+    console.error('Login request failed:', error);
+    return false;
+  }
+}
+
 async function fetchData(endpoint: string) {
     try {
-        const response = await fetch(`${API_BASE_URL}${endpoint}`);
+        const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+            credentials: 'include',
+        });
+
+        if (response.status === 401) {
+            window.location.href = '/login';
+            throw new Error('Unauthorized');
+        }
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         return await response.json();
     } catch (error) {
         console.error(`Could not fetch data from ${endpoint}:`, error);
-        return []; // Return an empty array on error to prevent crashes
+        return [];
     }
 }
 
-// --- DATA FETCHING FUNCTIONS ---
-
+// --- DATA FETCHING FUNCTIONS
 export const getLawsData = () => fetchData('/laws');
 export const getCaseStudiesData = () => fetchData('/casestudies');
 export const getResourcesData = () => fetchData('/resources');

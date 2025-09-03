@@ -1,3 +1,5 @@
+/* frontend/src/components/common/Navbar.css */
+
 /* Nav links */
 .nav-link {
   position: relative;
@@ -5,7 +7,7 @@
   transition: color 0.3s ease;
 }
 
-/* Active link text */
+/* Active link text becomes white */
 .nav-link.active {
   color: white !important;
   font-weight: 500;
@@ -16,14 +18,11 @@
   position: absolute;
   background: var(--brand-green);
   border-radius: 50rem;
-  transition: all 0.3s ease;
-  will-change: left, top, width, height;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); 
   z-index: 1;
 }
 
-/* ==============================================
-   MOBILE STYLES (collapsed menu)
-   ============================================== */
+/* MOBILE STYLES (collapsed menu) */
 @media (max-width: 991.98px) {
   .navbar-collapse {
     margin-top: 1rem;
@@ -36,4 +35,14 @@
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
   }
+  
+  /* Hide the indicator on mobile to avoid positioning issues */
+  .nav-indicator {
+      display: none;
+  }
+}
+
+.nav-link.active {
+  color: black;
+  font-weight: 500;
 }
