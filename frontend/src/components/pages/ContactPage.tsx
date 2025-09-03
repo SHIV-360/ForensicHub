@@ -78,10 +78,10 @@ const ContactPage = () => {
                                 <h3 className="fw-bold mb-4">Send us a Message</h3>
                                 <Form>
                                     <Row>
-                                        <Col md={6}><Form.Group className="mb-3"><Form.Label>First Name</Form.Label><Form.Control type="text" placeholder="John" /></Form.Group></Col>
-                                        <Col md={6}><Form.Group className="mb-3"><Form.Label>Last Name</Form.Label><Form.Control type="text" placeholder="Doe" /></Form.Group></Col>
+                                        <Col md={6}><Form.Group className="mb-3"><Form.Label>First Name</Form.Label><Form.Control type="text" placeholder="First Name" /></Form.Group></Col>
+                                        <Col md={6}><Form.Group className="mb-3"><Form.Label>Last Name</Form.Label><Form.Control type="text" placeholder="Last Name" /></Form.Group></Col>
                                     </Row>
-                                    <Form.Group className="mb-3"><Form.Label>Email Address</Form.Label><Form.Control type="email" placeholder="john.doe@example.com" /></Form.Group>
+                                    <Form.Group className="mb-3"><Form.Label>Email Address</Form.Label><Form.Control type="email" placeholder="example@example.com" /></Form.Group>
                                     <Form.Group className="mb-3"><Form.Label>Subject</Form.Label><Form.Control type="text" placeholder="Question about a case study" /></Form.Group>
                                     <Form.Group className="mb-3"><Form.Label>Message</Form.Label><Form.Control as="textarea" rows={5} placeholder="Your detailed message..." /></Form.Group>
                                     <Button type="submit" className="w-100 btn-brand-green mt-2">Send Message</Button>
