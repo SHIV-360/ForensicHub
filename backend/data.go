@@ -2,6 +2,17 @@ package main
 
 // Data structures
 
+type User struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+
+var users = []User{
+	{
+		Username: "Alex Johnson",
+		Password: "$2a$10$PYEqoFxlXltY113uxamdPuHcEKYpSe5zmAGZ38TbTu0jmfpnQ2IPC",
+	},
+}
 type Law struct {
 	Title       string `json:"title"`
 	Description string `json:"description"`
@@ -106,7 +117,7 @@ type QuickStats struct {
 }
 
 type ContactInfo struct {
-	Icon  string `json:"icon"` // We'll just pass the name, frontend will render the icon
+	Icon  string `json:"icon"` 
 	Value string `json:"value"`
 	Href  string `json:"href"`
 }

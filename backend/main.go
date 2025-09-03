@@ -6,11 +6,13 @@ import (
 	"net/http"
 )
 
+// This function was missing.
 func corsMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin", "*") // Allow any origin
+		w.Header().Set("Access-Control-Allow-Origin", "http://localhost:5173")
 		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+		w.Header().Set("Access-Control-Allow-Credentials", "true") // Allow cookies
 		if r.Method == "OPTIONS" {
 			w.WriteHeader(http.StatusOK)
 			return
@@ -22,7 +24,7 @@ func corsMiddleware(next http.Handler) http.Handler {
 func main() {
 	mux := http.NewServeMux()
 
-	// Generic handler to serve data
+	// Generic handler to serve global data
 	makeHandler := func(data interface{}) http.HandlerFunc {
 		return func(w http.ResponseWriter, r *http.Request) {
 			w.Header().Set("Content-Type", "application/json")
@@ -30,22 +32,26 @@ func main() {
 		}
 	}
 
-	// Create API endpoints
-	mux.HandleFunc("/api/laws", makeHandler(lawsData))
-	mux.HandleFunc("/api/casestudies", makeHandler(caseStudiesData))
-	mux.HandleFunc("/api/resources", makeHandler(resourcesData))
-	mux.HandleFunc("/api/certification-resources", makeHandler(certificationResources))
-	mux.HandleFunc("/api/industry-standards", makeHandler(industryStandards))
-	mux.HandleFunc("/api/resource-categories", makeHandler(resourceCategories))
-	mux.HandleFunc("/api/challenges", makeHandler(challengesData))
-	mux.HandleFunc("/api/leaderboard", makeHandler(leaderboardData))
-	mux.HandleFunc("/api/activity", makeHandler(recentActivityData))
-	mux.HandleFunc("/api/profile", makeHandler(userProfileData))
+	
+	//PUBLIC ROUTES
+	mux.HandleFunc("/api/login", handleLogin)
 	mux.HandleFunc("/api/contact-info", makeHandler(contactInfo))
 	mux.HandleFunc("/api/office-hours", makeHandler(officeHours))
 	mux.HandleFunc("/api/team", makeHandler(teamMembers))
 
-	// Wrap the mux with the CORS middleware
+	
+	//PROTECTED ROUTES ony for alex bhai
+	mux.Handle("/api/laws", jwtMiddleware(makeHandler(lawsData)))
+	mux.Handle("/api/casestudies", jwtMiddleware(makeHandler(caseStudiesData)))
+	mux.Handle("/api/resources", jwtMiddleware(makeHandler(resourcesData)))
+	mux.Handle("/api/certification-resources", jwtMiddleware(makeHandler(certificationResources)))
+	mux.Handle("/api/industry-standards", jwtMiddleware(makeHandler(industryStandards)))
+	mux.Handle("/api/resource-categories", jwtMiddleware(makeHandler(resourceCategories)))
+	mux.Handle("/api/challenges", jwtMiddleware(makeHandler(challengesData)))
+	mux.Handle("/api/leaderboard", jwtMiddleware(makeHandler(leaderboardData)))
+	mux.Handle("/api/activity", jwtMiddleware(makeHandler(recentActivityData)))
+	mux.Handle("/api/profile", jwtMiddleware(makeHandler(userProfileData)))
+
 	handler := corsMiddleware(mux)
 
 	log.Println("Starting server on localhost:8080")
