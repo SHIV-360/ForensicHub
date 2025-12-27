@@ -1,10 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/backend/$1" },
-    { "source": "/(.*)", "destination": "/frontend/dist/index.html" }
-  ],
-  "builds": [
-    { "src": "frontend/package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } },
-    { "src": "backend/main.go", "use": "@vercel/go" }
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/dist/index.html" }
   ]
 }
